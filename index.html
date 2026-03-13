@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Partenariat BDE No'Souci : la carte ski la plus avantageuse des Pyrénées pour vos étudiants.">
-    <title>Partenariat BDE | Carte No'Souci Pyrénées</title>
+    <meta name="description" content="BDE et Universités : devenez partenaire No Souci. Offrez à vos étudiants la carte de ski la plus avantageuse des Pyrénées, sans gestion administrative.">
+    <title>Partenariat BDE | Carte Ski No Souci Pyrénées</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
 
@@ -100,26 +100,26 @@
             background: linear-gradient(rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.9)), 
                         url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
-            padding: 10rem 0 12rem 0; 
+            padding: 9rem 0 11rem 0; 
             text-align: center;
             position: relative;
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 900;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
             letter-spacing: -1.5px;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 400;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto 3rem;
-            line-height: 1.6;
-            opacity: 0.9;
+            line-height: 1.7;
+            opacity: 0.95;
         }
 
         .hero-actions {
@@ -156,10 +156,10 @@
             text-decoration: underline;
         }
 
-        /* --- AVANTAGES --- */
+        /* --- AVANTAGES (Bénéfices clés) --- */
         .benefits {
             background-color: var(--ns-bg);
-            padding-bottom: 6rem;
+            padding-bottom: 5rem;
             position: relative;
             z-index: 10;
         }
@@ -184,11 +184,13 @@
             transform: translateY(-10px);
         }
 
-        /* CORRECTION CENTRAGE ABSOLU IMPARABLE */
+        /* CORRECTION CENTRAGE ICÔNES */
         .card-header {
-            height: 120px; /* Hauteur de la zone colorée fixée */
-            position: relative; /* Indispensable pour centrer l'icône à l'intérieur */
-            width: 100%;
+            height: 130px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
         .card-pink { background-color: var(--card-pink); }
@@ -197,12 +199,9 @@
         .card-blue { background-color: var(--card-blue); }
 
         .card-icon {
-            width: 50px; 
-            height: 50px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Ceci force l'icône au centre parfait */
+            display: block;
+            width: 55px; 
+            height: 55px;
         }
 
         .card-icon svg {
@@ -213,7 +212,6 @@
             stroke-width: 2.5;
             stroke-linecap: round;
             stroke-linejoin: round;
-            display: block;
         }
 
         .card-body {
@@ -224,37 +222,21 @@
             color: var(--ns-dark);
             font-size: 1.4rem;
             font-weight: 800;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .card-body p {
             font-size: 0.95rem;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
-        /* --- SECTION AMBASSADEUR --- */
-        .ns-ambassador {
-            padding: 3rem 0 5rem 0;
-            background-color: var(--ns-bg);
-        }
-
-        #ambassador-image {
-            max-width: 100%;
-            width: 600px;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            margin: 0 auto;
-            display: block;
-        }
-
-        /* --- SECTION FAST PASS --- */
-        .fast-pass {
+        /* --- SECTION CREDIBILITÉ (Preuve + Ambassadeur) --- */
+        .ns-ambassador-section {
             background-color: var(--ns-purple);
             color: white;
             padding: 6rem 0;
-            margin: 2rem 0 4rem 0;
+            margin: 3rem 0;
         }
 
         .fp-content {
@@ -268,16 +250,33 @@
         }
 
         .fp-text h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
 
-        .fp-text h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+        .fp-list {
+            list-style-type: none;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .fp-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .fp-list li::before {
+            content: "✓";
+            color: var(--ns-pink);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .fp-text p {
@@ -294,37 +293,39 @@
 
         .fp-image img {
             max-width: 100%;
+            width: 420px;
             height: auto;
             border-radius: 20px;
-            transform: rotate(5deg);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform: rotate(3deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
-        /* --- CTA BDE --- */
+        /* --- CTA BDE FINAL --- */
         .bde-pitch {
             text-align: center;
-            padding: 4rem 0 6rem 0;
+            padding: 5rem 0 7rem 0;
         }
 
         .bde-pitch h2 {
             color: var(--ns-dark);
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 900;
             margin-bottom: 1.5rem;
         }
 
         .bde-pitch p {
             max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
+            margin: 0 auto 2.5rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
             color: #666;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             .nav-links { display: none; }
-            h1 { font-size: 3rem; }
-            .fp-content { flex-direction: column; text-align: center; }
+            h1 { font-size: 2.8rem; }
+            .fp-content { flex-direction: column; text-align: left; }
             .fp-image img { transform: rotate(0); margin-top: 2rem; }
         }
     </style>
@@ -335,10 +336,9 @@
         <div class="container header-content">
             <a href="#" class="logo-text">No'Souci</a>
             <div class="nav-links">
-                <a href="#">Stations</a>
-                <a href="#">Tarifs</a>
+                <a href="#">Le Réseau N'PY</a>
+                <a href="#">Tarifs Étudiants</a>
                 <a href="#">Avantages</a>
-                <a href="#">Contact</a>
                 <a href="#partenaire" class="btn-pink">Devenir Partenaire BDE</a>
             </div>
         </div>
@@ -346,11 +346,11 @@
 
     <header>
         <div class="container">
-            <h1>La carte étudiante<br>la plus avantageuse<br>des Pyrénées</h1>
-            <p class="hero-subtitle">Proposez le sésame No'Souci à votre campus. Un code promo unique, zéro gestion pour le BDE, et des journées de ride à prix cassé pour vos étudiants!</p>
+            <h1>Le pass ski<br>le plus avantageux<br>des Pyrénées</h1>
+            <p class="hero-subtitle">Proposez la <strong>Carte No Souci</strong> à votre campus. Un partenariat 100% gratuit pour votre BDE, zéro gestion administrative, et des journées de ride à prix cassé pour vos étudiants. Letzgo !</p>
             <div class="hero-actions">
                 <a href="#partenaire" class="btn-hero">Créer notre code BDE</a>
-                <a href="#details" class="link-hero">Voir les avantages</a>
+                <a href="#details" class="link-hero">Voir les bénéfices</a>
             </div>
         </div>
     </header>
@@ -370,8 +370,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3>Zéro gestion</h3>
-                        <p>Fini les commandes de forfaits. Tout est digitalisé via un code exclusif école.</p>
+                        <h3>Zéro gestion BDE</h3>
+                        <p>Fini les commandes de forfaits groupées. Tout est digitalisé via un code promo exclusif à votre école.</p>
                     </div>
                 </div>
 
@@ -386,7 +386,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Mains libres</h3>
-                        <p>Pas de passage en caisse. On skie direct, on paie le mois suivant.</p>
+                        <p>Le télépéage du ski. Pas d'attente en caisse : on skie direct, on paie le mois suivant à l'usage.</p>
                     </div>
                 </div>
 
@@ -401,7 +401,7 @@
                     </div>
                     <div class="card-body">
                         <h3>Jusqu'à -50%</h3>
-                        <p>-30% en semaine, -15% le week-end, et des journées fidélité offertes.</p>
+                        <p>Réductions automatiques : -30% en semaine, -15% le week-end, et journées fidélité offertes.</p>
                     </div>
                 </div>
 
@@ -414,8 +414,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3>Sécurisé</h3>
-                        <p>L'assurance secours sur piste est incluse par défaut toute la saison.</p>
+                        <h3>Assurance incluse</h3>
+                        <p>L'argument qui rassure le campus : l'assurance secours sur piste est intégrée par défaut.</p>
                     </div>
                 </div>
 
@@ -423,22 +423,19 @@
         </div>
     </section>
 
-    <section class="ns-ambassador">
-        <div class="container">
-            <img src="tony-assis.jpg" alt="Ambassadeur No'Souci" id="ambassador-image">
-        </div>
-    </section>
-
-    <section class="fast-pass">
+    <section class="ns-ambassador-section">
         <div class="container fp-content">
             <div class="fp-text">
-                <h2>Nouveauté depuis la saison<br>2024-2025 🚀🚀</h2>
-                <h3>Le Fast Pass déboule en station !</h3>
-                <p>Et oui, cette saison nous ajoutons un avantage ! Le "Fast pass" est inclus dans votre abonnement ! Plus question d'attendre aux principales remontées, avec la carte No Souci vos étudiants pourront emprunter la file prioritaire et profiter toujours plus !</p>
-                <p>Cerise on the cake, vous n'aurez rien à faire, seulement à vous présenter aux portiques dédiés pour skier encore plus !</p>
+                <h2>1 carte, 14 stations,<br>l'expertise N'PY.</h2>
+                <p>En devenant partenaire No Souci, vous adossez votre BDE au premier réseau de stations des Pyrénées. Un gage de qualité et de sécurité pour votre administration.</p>
+                <ul class="fp-list">
+                    <li><strong>8 stations historiques :</strong> Peyragudes, Piau, Grand Tourmalet, Pic du Midi, Luz-Ardiden, Cauterets, Gourette, La Pierre St-Martin.</li>
+                    <li><strong>6 stations partenaires :</strong> Ax 3 Domaines, Guzet, Les Monts d'Olmes, Formiguères, Porté-Puymorens, Cambre d'Aze.</li>
+                    <li><strong>Nouveauté :</strong> Le "Fast Pass" inclus pour emprunter les files prioritaires aux remontées !</li>
+                </ul>
             </div>
             <div class="fp-image">
-                <img src="carte-no-souci-pyrenees.png" alt="Carte No Souci Pyrénées">
+                <img src="tony-assis.jpg" alt="Ambassadeur No'Souci - Réseau N'PY">
             </div>
         </div>
     </section>
@@ -446,9 +443,9 @@
     <section class="bde-pitch" id="partenaire">
         <div class="container">
             <h2>Prêt à régaler vos étudiants ?</h2>
-            <p>Devenez partenaire en quelques clics. C'est 100% gratuit pour le BDE. Nous créons votre code promo, vous le diffusez sur vos réseaux, et vos étudiants commandent leur carte à tarif réduit livrée direct chez eux.</p>
+            <p>Devenir BDE partenaire est <strong>100% gratuit</strong> et se fait en 48h. Nous créons votre code campus, vous le diffusez sur vos réseaux, et vos étudiants commandent leur carte à tarif réduit livrée directement chez eux.</p>
             <br>
-            <a href="mailto:contact@nosouci.com" class="btn-pink" style="font-size: 1.2rem; padding: 15px 40px;">Contactez la team No'Souci</a>
+            <a href="mailto:contact@nosouci.com" class="btn-pink" style="font-size: 1.25rem; padding: 18px 45px;">Demander la création de notre code BDE</a>
         </div>
     </section>
 
