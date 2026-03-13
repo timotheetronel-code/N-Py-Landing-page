@@ -9,9 +9,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 
         :root {
-            --primary: #0f1c2e;
+            --primary: #0f1c2e; /* Bleu nuit N'PY */
             --secondary: #ffffff;
-            --accent: #ff6b35;
+            --accent: #ff6b35; /* Orange N'PY */
             --accent-light: rgba(255, 107, 53, 0.1);
             --light-bg: #f8fafc;
             --text-gray: #475569;
@@ -51,19 +51,24 @@
         .top-nav img {
             height: 50px;
             width: auto;
+            object-fit: contain;
         }
 
-        /* --- HERO SECTION IMMERSIVE --- */
+        /* --- HERO SECTION IMMERSIVE (L'image de montagne) --- */
         header {
-            background: linear-gradient(rgba(15, 28, 46, 0.6), rgba(15, 28, 46, 0.9)), 
-                        url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background-color: var(--primary); /* Couleur de secours */
+            background-image: linear-gradient(rgba(15, 28, 46, 0.6), rgba(15, 28, 46, 0.9)), 
+                              url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--secondary);
-            padding: 10rem 0 8rem 0; /* Plus de padding pour allonger le haut */
+            padding: 8rem 0 7rem 0;
             text-align: center;
         }
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 1.5rem;
@@ -79,7 +84,7 @@
             color: #e2e8f0;
             max-width: 750px;
             margin: 0 auto 3rem;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         .cta-button {
@@ -98,36 +103,35 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(255, 107, 53, 0.6);
-            background-color: #ff5416;
+            background-color: #e65c2a;
         }
 
         /* --- AVANTAGES PREMIUM --- */
         .benefits {
-            padding: 8rem 0; /* Très grand padding pour aérer la page */
+            padding: 6rem 0;
             background-color: var(--light-bg);
         }
 
         .benefits h2 {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
             color: var(--primary);
-            letter-spacing: -0.5px;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
         }
 
         .benefit-card {
             background: var(--secondary);
-            border-radius: 20px; /* Coins plus arrondis */
-            padding: 3rem 2rem; /* Plus haut et plus large */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
             border: 1px solid rgba(0,0,0,0.03);
             text-align: center;
             display: flex;
@@ -136,61 +140,61 @@
         }
 
         .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
             border-color: var(--accent-light);
         }
 
         /* Style des icônes vectorielles */
         .icon-container {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background-color: var(--accent-light);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: var(--accent);
         }
 
         .icon-container svg {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             stroke-width: 1.5;
         }
 
         .benefit-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             color: var(--primary);
         }
 
         .benefit-card p {
             color: var(--text-gray);
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         /* --- SECTION LA CARTE --- */
         .credibility {
             background-color: var(--primary);
             color: var(--secondary);
-            padding: 7rem 0;
+            padding: 6rem 0;
         }
 
         .credibility-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 5rem;
+            gap: 4rem;
             flex-wrap: wrap;
         }
 
         .credibility-text {
             flex: 1;
-            min-width: 320px;
+            min-width: 300px;
         }
 
         .credibility-text h2 {
@@ -200,14 +204,14 @@
         }
 
         .credibility-text p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #cbd5e1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .card-image-container {
             flex: 1;
-            min-width: 320px;
+            min-width: 300px;
             display: flex;
             justify-content: center;
             animation: float 6s ease-in-out infinite;
@@ -216,7 +220,9 @@
         .card-image {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+            max-height: 350px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
         }
 
         @keyframes float {
@@ -227,30 +233,30 @@
 
         /* --- FOOTER CTA --- */
         .bottom-cta {
-            background-color: var(--secondary);
-            padding: 6rem 0;
+            background-color: var(--light-bg);
+            padding: 5rem 0;
             text-align: center;
         }
 
         .bottom-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
             color: var(--primary);
         }
 
         footer {
-            background-color: #08101a;
+            background-color: #0a121e;
             color: #64748b;
             text-align: center;
-            padding: 3rem 0;
+            padding: 2.5rem 0;
             font-size: 0.95rem;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
+            h1 { font-size: 2.2rem; }
             .hero-subtitle { font-size: 1.1rem; }
-            header { padding: 6rem 20px 5rem; }
+            header { padding: 5rem 20px; }
             .credibility-content { flex-direction: column-reverse; gap: 3rem; text-align: center;}
         }
     </style>
@@ -259,7 +265,7 @@
 
     <nav class="top-nav">
         <div class="container">
-            <img src="logo-npy.jpg" alt="Logo N'PY">
+            <img src="logo-npy.jpg" alt="Logo Nouvelles Pyrénées">
         </div>
     </nav>
 
@@ -267,7 +273,7 @@
         <div class="container">
             <h1>Le ski sans contrainte <span>pour vos étudiants</span></h1>
             <p class="hero-subtitle">Le programme partenaire exclusif pour les BDE et Universités. Offrez un accès privilégié à 14 stations des Pyrénées avec des réductions massives et une gestion 100% digitalisée.</p>
-            <a href="#contact" class="cta-button">Devenir Partenaire BDE</a>
+            <a href="mailto:contact@n-py.com" class="cta-button">Devenir Partenaire BDE</a>
         </div>
     </header>
 
@@ -284,7 +290,7 @@
                         </svg>
                     </div>
                     <h3>Zéro charge mentale</h3>
-                    <p>Un service "clé en main". Oubliez la logistique complexe, les commandes papier et la récolte de fonds. Tout est 100% digitalisé via un code exclusif à votre école.</p>
+                    <p>Un service "clé en main". Oubliez la logistique, les commandes papier et la récolte de fonds. Tout est 100% digitalisé via un code exclusif école.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -295,7 +301,7 @@
                         </svg>
                     </div>
                     <h3>Budget préservé</h3>
-                    <p>Des réductions massives et automatiques : jusqu'à -30% en semaine, -15% le week-end. Et pour récompenser la fidélité, la 7ème journée de la saison est à moitié prix.</p>
+                    <p>Des réductions massives et automatiques : jusqu'à -30% en semaine, -15% le week-end. La 7ème journée de la saison est même à moitié prix.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -305,7 +311,7 @@
                         </svg>
                     </div>
                     <h3>Fini les caisses</h3>
-                    <p>Le télépéage du ski. Vos étudiants accèdent directement aux remontées mécaniques. Ils skient d'abord, et sont prélevés le mois suivant uniquement sur ce qu'ils consomment.</p>
+                    <p>Le télépéage du ski. Vos étudiants accèdent directement aux remontées. Ils skient d'abord et sont prélevés uniquement sur ce qu'ils consomment.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -315,7 +321,7 @@
                         </svg>
                     </div>
                     <h3>Sécurité incluse</h3>
-                    <p>L'argument qui rassure votre administration : l'assurance secours sur piste est intégrée par défaut à la carte. En cas de pépin, les frais d'intervention sont couverts.</p>
+                    <p>L'argument qui rassure votre campus : l'assurance secours sur piste est intégrée par défaut à la carte. En cas de pépin, les frais sont couverts.</p>
                 </div>
             </div>
         </div>
