@@ -15,6 +15,7 @@
             --ns-bg: #ffffff;
             --ns-light-bg: #f8fafc;
             --ns-text: #4a4a4a;
+            --ns-footer-bg: #32166f; /* Couleur exacte du footer de la capture */
             
             --card-pink: #ff477e;
             --card-purple: #8b3dff;
@@ -96,7 +97,7 @@
             opacity: 1 !important;
         }
 
-        /* --- HERO SECTION IMMERSIVE (Avec image de montagne) --- */
+        /* --- HERO SECTION IMMERSIVE --- */
         header {
             background: linear-gradient(rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.9)), 
                         url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
@@ -313,15 +314,15 @@
         }
 
         .fast-pass-section .fp-image img {
-            transform: rotate(-5deg); /* Rotation inverse pour le style */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Ombre plus douce sur fond clair */
+            transform: rotate(-5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
         }
 
         /* --- CTA BDE FINAL --- */
         .bde-pitch {
             background-color: var(--ns-bg);
             text-align: center;
-            padding: 6rem 0 8rem 0;
+            padding: 6rem 0 6rem 0;
         }
 
         .bde-pitch h2 {
@@ -339,12 +340,79 @@
             color: #666;
         }
 
+        /* --- FOOTER NOUVEAU (A PROPOS, RGPD, ETC.) --- */
+        .site-footer {
+            background-color: var(--ns-footer-bg);
+            color: white;
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: white;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
             .nav-links { display: none; }
             h1 { font-size: 2.8rem; }
             .fp-content { flex-direction: column; text-align: left; }
             .fp-image img { transform: rotate(0); margin-top: 2rem; max-width: 90%; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
@@ -479,6 +547,45 @@
             <a href="mailto:contact@nosouci.com" class="btn-pink" style="font-size: 1.25rem; padding: 18px 45px;">Demander la création de notre code BDE</a>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">No'Souci</a>
+                </div>
+                <div class="footer-col">
+                    <h4>A propos de No'Souci</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Assurances</a></li>
+                        <li><a href="#">No'Souci c'est quoi ?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>J'en veux !</h4>
+                    <ul>
+                        <li><a href="#">Mon compte</a></li>
+                        <li><a href="#">Tarifs</a></li>
+                        <li><a href="#">Achat Express</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>RGPD</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Conditions générales de vente</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© N'PY 2026</span>
+                <span>Réalisé par N-PY</span>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
