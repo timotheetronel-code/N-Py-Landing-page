@@ -8,7 +8,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
 
         :root {
-            /* VIOLET PROFOND N'PY */
             --ns-purple: #4d148c; 
             --ns-pink: #ff478e; 
             --ns-dark: #1a0b2e;
@@ -18,7 +17,6 @@
             --ns-footer-bg: #2d0b54; 
             --ns-input-bg: #f3f6ff;
             
-            /* COULEURS DES CARTES */
             --card-pink: #ff478e;
             --card-purple: #8b3dff;
             --card-yellow: #fff200;
@@ -44,7 +42,6 @@
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
         .nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
         .btn-pink-nav { background-color: var(--ns-pink); padding: 10px 22px; border-radius: 5px; font-size: 0.85rem !important; font-weight: 700 !important; color: white !important; transition: opacity 0.2s; }
-        .btn-pink-nav:hover { opacity: 0.9; }
 
         /* --- HERO --- */
         header {
@@ -53,9 +50,7 @@
             color: white; padding: 7rem 0 10rem 0; text-align: center;
         }
         h1 { font-size: 3rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -1px; }
-        .hero-subtitle { font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem; opacity: 1; }
         .btn-hero { background-color: var(--ns-pink); color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 1.05rem; display: inline-block; transition: transform 0.2s; }
-        .btn-hero:hover { transform: translateY(-2px); }
 
         /* --- BENEFITS GRID --- */
         .benefits { padding-bottom: 5rem; }
@@ -68,48 +63,52 @@
         .card-body h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.8rem; color: var(--ns-purple); }
         .card-body p { font-size: 0.9rem; color: #555; }
 
-        /* --- SECTIONS TEXTE/IMAGE --- */
-        .ns-ambassador-section, .fast-pass-section { padding: 6rem 0; }
+        /* --- AMBASSADOR SECTION --- */
+        .ns-ambassador-section { padding: 6rem 0; background: var(--ns-purple); color: white; }
         .fp-content { display: flex; align-items: center; gap: 4rem; }
-        .fp-text h2 { font-size: 2.4rem; font-weight: 900; margin-bottom: 1.5rem; color: var(--ns-purple); }
-        .ns-ambassador-section .fp-text h2 { color: white; }
+        .fp-text h2 { font-size: 2.4rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.2; }
         .fp-list { list-style: none; margin-bottom: 1.5rem; font-size: 1rem; }
         .fp-list li { margin-bottom: 12px; padding-left: 35px; position: relative; }
         .fp-list li::before { content: "✓"; color: var(--ns-pink); position: absolute; left: 0; font-weight: 900; font-size: 1.3rem; }
         .fp-image img { width: 400px; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
 
+        /* --- FAST PASS SECTION (ENRICHIE) --- */
+        .fast-pass-section { padding: 6rem 0; background-color: var(--ns-light-bg); }
+        .fast-pass-section h2 { color: var(--ns-purple); font-size: 2.4rem; font-weight: 900; margin-bottom: 1.5rem; }
+        .fast-pass-section p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+        .fast-pass-section .highlight-box { background: white; padding: 20px; border-radius: 15px; border-left: 5px solid var(--ns-pink); box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top: 2rem; }
+
         /* --- CONTACT SECTION --- */
-        .contact-section { padding: 6rem 0; background-color: var(--ns-light-bg); }
+        .contact-section { padding: 6rem 0; background-color: white; }
         .contact-header { margin-bottom: 3.5rem; }
         .contact-header h2 { font-size: 2.8rem; font-weight: 900; color: #1a365d; margin-bottom: 0.5rem; }
-        .contact-header p { font-size: 1.3rem; color: var(--ns-purple); font-weight: 700; margin-bottom: 1.5rem; }
-        .phone-box { font-size: 1.1rem; color: #1a365d; font-weight: 600; }
+        .contact-header p { font-size: 1.3rem; color: var(--ns-purple); font-weight: 700; }
+        .phone-box { font-size: 1.1rem; color: #1a365d; margin-top: 1rem; }
         .phone-box span { color: var(--ns-pink); font-weight: 900; font-size: 1.3rem; }
-        .contact-form-container { background: white; border-radius: 24px; padding: 50px; box-shadow: 0 25px 60px rgba(0,0,0,0.06); }
+        .contact-form-container { background: white; border-radius: 24px; padding: 50px; box-shadow: 0 25px 60px rgba(0,0,0,0.06); border: 1px solid #eee; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .form-group label { font-size: 1rem; font-weight: 600; color: #1a365d; margin-bottom: 8px; display: block; }
         .form-group input, .form-group select, .form-group textarea { padding: 16px; border-radius: 12px; border: none; background: var(--ns-input-bg); font-size: 1rem; width: 100%; outline: none; }
         .form-full { grid-column: span 2; }
-        .btn-submit { background: var(--ns-purple); color: white; border: none; padding: 18px; border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.3s; font-size: 1.1rem; margin-top: 10px; }
+        .btn-submit { background: var(--ns-purple); color: white; border: none; padding: 18px; border-radius: 12px; font-weight: 800; cursor: pointer; transition: 0.3s; font-size: 1.1rem; }
         .btn-submit:hover { background: var(--ns-pink); transform: translateY(-3px); }
 
-        /* --- FOOTER OPTIMISÉ (PLUS DE LISIBILITÉ) --- */
+        /* --- FOOTER --- */
         .site-footer { background-color: var(--ns-footer-bg); color: white; padding: 5rem 0 3rem 0; }
-        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; }
-        .footer-col h4 { font-size: 1rem; margin-bottom: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .footer-col h4 { font-size: 1rem; margin-bottom: 1.5rem; font-weight: 800; text-transform: uppercase; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 12px; display: flex; align-items: center; }
-        /* Ajout de la puce blanche ressortie */
-        .footer-col ul li::before { content: ""; width: 6px; height: 6px; background-color: white; border-radius: 50%; margin-right: 12px; display: inline-block; }
-        .footer-col ul li a { font-size: 0.95rem; color: white; text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
-        .footer-col ul li a:hover { opacity: 1; text-decoration: underline; }
-        
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom span { opacity: 0.9; }
+        .footer-col ul li::before { content: ""; width: 6px; height: 6px; background-color: white; border-radius: 50%; margin-right: 12px; }
+        .footer-col ul li a { color: white; text-decoration: none; opacity: 0.85; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; margin-top: 3rem; display: flex; justify-content: space-between; font-size: 0.9rem; }
 
         @media (max-width: 900px) {
             .nav-links { display: none; }
-            .fp-content { flex-direction: column !important; }
+            .fp-content { flex-direction: column !important; text-align: left; }
+            .fp-image img { width: 100%; max-width: 400px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-full { grid-column: span 1; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -144,21 +143,21 @@
                 </div>
                 <div class="benefit-card">
                     <div class="card-header" style="background:var(--card-purple)"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg></div></div>
-                    <div class="card-body"><h3>Mains libres</h3><p>Accès direct aux pistes. Pas de caisse, paiement après usage.</p></div>
+                    <div class="card-body"><h3>Mains libres</h3><p>Le télépéage du ski. Pas de caisse, paiement automatique après usage.</p></div>
                 </div>
                 <div class="benefit-card">
                     <div class="card-header" style="background:var(--card-yellow)"><div class="card-icon"><svg viewBox="0 0 24 24" style="stroke:#333"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div></div>
-                    <div class="card-body"><h3>Jusqu'à -50%</h3><p>Réductions massives toute l'année et journées offertes.</p></div>
+                    <div class="card-body"><h3>Jusqu'à -50%</h3><p>Réductions massives toute la saison et journées de ski offertes.</p></div>
                 </div>
                 <div class="benefit-card">
                     <div class="card-header" style="background:var(--card-blue)"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div></div>
-                    <div class="card-body"><h3>Assurance</h3><p>Secours sur pistes inclus d'office pour vos étudiants.</p></div>
+                    <div class="card-body"><h3>Assurance</h3><p>Secours sur pistes inclus d'office pour la sécurité de vos étudiants.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="ns-ambassador-section" style="background:var(--ns-purple); color:white;">
+    <section class="ns-ambassador-section">
         <div class="container fp-content">
             <div class="fp-text">
                 <h2>1 pass, 14 stations.</h2>
@@ -172,12 +171,15 @@
         </div>
     </section>
 
-    <section class="fast-pass-section" style="background:var(--ns-light-bg);">
+    <section class="fast-pass-section">
         <div class="container fp-content" style="flex-direction: row-reverse;">
             <div class="fp-text">
                 <h2>Le Fast Pass inclus 🚀</h2>
-                <p>L'atout majeur : file prioritaire aux remontées pour skier plus et attendre moins.</p>
-                <p>Un avantage exclusif déjà intégré dans la carte No Souci.</p>
+                <p><strong>L'atout majeur :</strong> file prioritaire aux remontées pour skier plus et attendre moins. Vos étudiants ne perdent plus de temps dans les files d'attente les jours de forte affluence.</p>
+                <p>C'est un avantage exclusif déjà intégré dans la carte No Souci. Pas besoin d'option supplémentaire ou de surcoût, le privilège est automatique dès que l'étudiant passe le portique dédié.</p>
+                <div class="highlight-box">
+                    <strong>Boostez l'expérience :</strong> Proposer le Fast Pass, c'est offrir un confort VIP à vos membres. C'est l'argument qui fait la différence lors de vos sorties ski club ou week-ends BDE.
+                </div>
             </div>
             <div class="fp-image"><img src="carte-no-souci-pyrenees.png" alt="Carte No Souci"></div>
         </div>
@@ -212,32 +214,11 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col"><a href="#" class="logo-text">No'Souci</a></div>
-                <div class="footer-col">
-                    <h4>À PROPOS</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>SERVICES</h4>
-                    <ul>
-                        <li><a href="#">Mon compte</a></li>
-                        <li><a href="#">Tarifs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>LÉGAL</h4>
-                    <ul>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGV</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h4>À PROPOS</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>SERVICES</h4><ul><li><a href="#">Mon compte</a></li><li><a href="#">Tarifs</a></li></ul></div>
+                <div class="footer-col"><h4>LÉGAL</h4><ul><li><a href="#">Mentions légales</a></li><li><a href="#">CGV</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <span>© N'PY 2026</span>
-                <span>Réalisé par N-PY</span>
-            </div>
+            <div class="footer-bottom"><span>© N'PY 2026</span><span>Pure Pyrénées</span></div>
         </div>
     </footer>
 
