@@ -3,415 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BDE et Universités : devenez partenaire No Souci. Offrez à vos étudiants la carte de ski la plus avantageuse des Pyrénées, sans gestion administrative.">
     <title>Partenariat BDE | Carte Ski No Souci Pyrénées</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
 
         :root {
-            --ns-purple: #4a25a9;
-            --ns-pink: #ff477e;
-            --ns-dark: #1f0d46;
-            --ns-bg: #ffffff;
-            --ns-light-bg: #f8fafc;
-            --ns-text: #4a4a4a;
+            --ns-purple: #4a25a9; --ns-pink: #ff477e; --ns-dark: #1f0d46;
+            --ns-bg: #ffffff; --ns-light-bg: #f8fafc; --ns-text: #4a4a4a;
             --ns-footer-bg: #32166f;
-            
-            --card-pink: #ff477e;
-            --card-purple: #8b3dff;
-            --card-yellow: #ffe600;
-            --card-blue: #00b4d8;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
         body {
             background-color: var(--ns-bg);
             color: var(--ns-text);
-            -webkit-font-smoothing: antialiased;
+            font-size: 14px; /* Base de texte plus fine */
+            line-height: 1.5;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- NAVIGATION --- */
-        .top-nav {
-            background-color: var(--ns-purple);
-            padding: 1rem 0;
-            position: relative;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        /* --- NAV PLUS FINE --- */
+        .top-nav { background-color: var(--ns-purple); padding: 0.6rem 0; position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        
         .logo-text {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.3rem; /* Logo réduit */
             font-weight: 900;
             text-decoration: none;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
+        .nav-links { display: flex; gap: 1.2rem; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 0.8rem; }
+        
         .btn-pink {
             background-color: var(--ns-pink);
-            color: white !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 700 !important;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 6px 14px;
+            border-radius: 5px;
+            font-size: 0.8rem !important;
         }
 
-        .btn-pink:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 71, 126, 0.4);
-            opacity: 1 !important;
-        }
-
-        /* --- HERO SECTION IMMERSIVE --- */
+        /* --- HERO RÉDUIT --- */
         header {
-            background: linear-gradient(rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.9)), 
-                        url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 28, 46, 0.6), rgba(15, 28, 46, 0.8)), 
+                        url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
-            padding: 9rem 0 11rem 0; 
+            padding: 4rem 0 6rem 0;
             text-align: center;
-            position: relative;
         }
 
-        h1 {
-            font-size: 3.8rem;
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1.5px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            font-weight: 400;
-            max-width: 750px;
-            margin: 0 auto 3rem;
-            line-height: 1.7;
-            opacity: 0.95;
-        }
-
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
+        h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; }
+        .hero-subtitle { font-size: 0.95rem; max-width: 550px; margin: 0 auto 2rem; opacity: 0.9; }
+        
         .btn-hero {
             background-color: var(--ns-pink);
             color: white;
-            padding: 15px 35px;
-            border-radius: 8px;
+            padding: 10px 22px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            font-size: 0.85rem;
         }
 
-        .btn-hero:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(255, 71, 126, 0.3);
+        /* --- CARTES PLUS PETITES --- */
+        .benefits { padding-bottom: 3rem; }
+        .benefits-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            gap: 1rem; 
+            margin-top: -3rem; 
         }
 
-        .link-hero {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+        .benefit-card { background: white; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; overflow: hidden; }
+        .card-header { height: 70px; display: flex; align-items: center; justify-content: center; }
+        .card-icon { width: 35px; height: 35px; } /* Icônes réduites */
+        .card-icon svg { stroke: #fff; fill: none; stroke-width: 2; }
+        
+        .card-body { padding: 1.2rem 1rem; }
+        .card-body h3 { font-size: 1rem; font-weight: 800; margin-bottom: 0.4rem; color: var(--ns-dark); }
+        .card-body p { font-size: 0.8rem; color: #666; line-height: 1.4; }
+
+        /* --- SECTIONS TEXTE & IMAGE --- */
+        .ns-ambassador-section, .fast-pass-section { padding: 3rem 0; }
+        .fp-content { display: flex; align-items: center; gap: 2.5rem; }
+        .fp-text h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 1rem; }
+        .fp-list { list-style: none; margin-bottom: 1rem; font-size: 0.85rem; }
+        .fp-list li { margin-bottom: 5px; padding-left: 20px; position: relative; }
+        .fp-list li::before { content: "✓"; color: var(--ns-pink); position: absolute; left: 0; font-weight: bold; }
+        
+        .fp-image img { 
+            width: 300px; /* Taille image fixe et réduite */
+            border-radius: 12px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
         }
 
-        .link-hero:hover {
-            text-decoration: underline;
-        }
+        /* --- CTA FINAL --- */
+        .bde-pitch { padding: 4rem 0; text-align: center; }
+        .bde-pitch h2 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+        .bde-pitch p { font-size: 0.9rem; max-width: 600px; margin: 0 auto 1.5rem; }
 
-        /* --- AVANTAGES (Bénéfices clés) --- */
-        .benefits {
-            background-color: var(--ns-bg);
-            padding-bottom: 5rem;
-            position: relative;
-            z-index: 10;
-        }
+        /* --- FOOTER COMPACT --- */
+        .site-footer { background-color: var(--ns-footer-bg); color: white; padding: 2.5rem 0 1rem 0; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .footer-col h4 { font-size: 0.85rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col ul li a { font-size: 0.75rem; color: rgba(255,255,255,0.8); text-decoration: none; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; font-size: 0.7rem; display: flex; justify-content: space-between; }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin-top: -6rem; 
-        }
-
-        .benefit-card {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card-header {
-            height: 130px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .card-pink { background-color: var(--card-pink); }
-        .card-purple { background-color: var(--card-purple); }
-        .card-yellow { background-color: var(--card-yellow); }
-        .card-blue { background-color: var(--card-blue); }
-
-        .card-icon {
-            display: block;
-            width: 55px; 
-            height: 55px;
-        }
-
-        .card-icon svg {
-            width: 100%;
-            height: 100%;
-            stroke: #ffffff;
-            fill: none;
-            stroke-width: 2.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .card-body {
-            padding: 2rem 1.5rem;
-        }
-
-        .card-body h3 {
-            color: var(--ns-dark);
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-        }
-
-        .card-body p {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* --- SECTION 1 : AMBASSADEUR (Violet) --- */
-        .ns-ambassador-section {
-            background-color: var(--ns-purple);
-            color: white;
-            padding: 6rem 0;
-            margin-top: 2rem;
-        }
-
-        .fp-content {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-        }
-
-        .fp-text {
-            flex: 1;
-        }
-
-        .fp-text h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .fp-list {
-            list-style-type: none;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .fp-list li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
-
-        .fp-list li::before {
-            content: "✓";
-            color: var(--ns-pink);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .fp-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            opacity: 0.9;
-        }
-
-        .fp-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .fp-image img {
-            max-width: 100%;
-            width: 420px;
-            height: auto;
-            border-radius: 20px;
-            transform: rotate(3deg);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-        }
-
-        /* --- SECTION 2 : CARTE & FAST PASS (Gris très clair) --- */
-        .fast-pass-section {
-            background-color: var(--ns-light-bg);
-            color: var(--ns-text);
-            padding: 6rem 0;
-        }
-
-        .fast-pass-section h2 {
-            color: var(--ns-dark);
-        }
-
-        .fast-pass-section .fp-image img {
-            transform: rotate(-5deg);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
-        }
-
-        /* --- CTA BDE FINAL --- */
-        .bde-pitch {
-            background-color: var(--ns-bg);
-            text-align: center;
-            padding: 6rem 0 6rem 0;
-        }
-
-        .bde-pitch h2 {
-            color: var(--ns-dark);
-            font-size: 2.6rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-        }
-
-        .bde-pitch p {
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #666;
-        }
-
-        /* --- FOOTER OFFICIEL NO'SOUCI --- */
-        .site-footer {
-            background-color: var(--ns-footer-bg);
-            color: white;
-            padding: 4rem 0 2rem 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: white;
-            text-decoration: none;
-            letter-spacing: -1px;
-        }
-
-        .footer-col h4 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 1rem;
-        }
-
-        .footer-col ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.95rem;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
-
-        .footer-col ul li a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.4);
-            padding-top: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            color: white;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
             .nav-links { display: none; }
-            h1 { font-size: 2.8rem; }
-            .fp-content { flex-direction: column; text-align: left; }
-            .fp-image img { transform: rotate(0); margin-top: 2rem; max-width: 90%; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-        }
-
-        @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .fp-content { flex-direction: column !important; text-align: center; }
+            .fp-image img { width: 100%; max-width: 250px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
@@ -421,167 +127,87 @@
         <div class="container header-content">
             <a href="#" class="logo-text">No'Souci</a>
             <div class="nav-links">
-                <a href="#">Le Réseau N'PY</a>
                 <a href="#">Tarifs Étudiants</a>
                 <a href="#">Avantages</a>
-                <a href="#partenaire" class="btn-pink">Devenir Partenaire BDE</a>
+                <a href="#partenaire" class="btn-pink">Devenir Partenaire</a>
             </div>
         </div>
     </nav>
 
     <header>
         <div class="container">
-            <h1>Le pass ski<br>le plus avantageux<br>des Pyrénées</h1>
-            <p class="hero-subtitle">Proposez la <strong>Carte No Souci</strong> à votre campus. Un partenariat 100% gratuit pour votre BDE, zéro gestion administrative, et des journées de glisse à tarif négocié pour vos étudiants. Rejoignez le mouvement.</p>
+            <h1>Le pass ski<br>le plus avantageux</h1>
+            <p class="hero-subtitle">Proposez la Carte No Souci à votre campus. Zéro gestion pour le BDE, prix cassés pour les étudiants.</p>
             <div class="hero-actions">
                 <a href="#partenaire" class="btn-hero">Créer notre code BDE</a>
-                <a href="#details" class="link-hero">Voir les bénéfices</a>
             </div>
         </div>
     </header>
 
-    <section class="benefits" id="details">
+    <section class="benefits">
         <div class="container">
             <div class="benefits-grid">
-                
                 <div class="benefit-card">
-                    <div class="card-header card-pink">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <circle cx="12" cy="12" r="6"></circle>
-                                <circle cx="12" cy="12" r="2"></circle>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Zéro gestion BDE</h3>
-                        <p>Fini les commandes de forfaits groupées. Tout est digitalisé via un code promo exclusif à votre école.</p>
-                    </div>
+                    <div class="card-header" style="background:var(--ns-pink)"><div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg></div></div>
+                    <div class="card-body"><h3>Zéro gestion</h3><p>Code promo unique pour votre école.</p></div>
                 </div>
-
                 <div class="benefit-card">
-                    <div class="card-header card-purple">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Mains libres</h3>
-                        <p>Le télépéage du ski. Pas d'attente en caisse : on skie direct, on paie le mois suivant à l'usage.</p>
-                    </div>
+                    <div class="card-header" style="background:#8b3dff"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg></div></div>
+                    <div class="card-body"><h3>Mains libres</h3><p>On skie d'abord, on paie après.</p></div>
                 </div>
-
                 <div class="benefit-card">
-                    <div class="card-header card-yellow">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24">
-                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                                <line x1="1" y1="10" x2="23" y2="10"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Jusqu'à -50%</h3>
-                        <p>Réductions automatiques : -30% en semaine, -15% le week-end, et journées fidélité offertes.</p>
-                    </div>
+                    <div class="card-header" style="background:#ffe600"><div class="card-icon"><svg viewBox="0 0 24 24" style="stroke:#333"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div></div>
+                    <div class="card-body"><h3>Jusqu'à -50%</h3><p>Réductions automatiques toute l'année.</p></div>
                 </div>
-
                 <div class="benefit-card">
-                    <div class="card-header card-blue">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Assurance incluse</h3>
-                        <p>L'argument qui rassure le campus : l'assurance secours sur piste est intégrée par défaut.</p>
-                    </div>
+                    <div class="card-header" style="background:#00b4d8"><div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div></div>
+                    <div class="card-body"><h3>Assurance</h3><p>Secours sur pistes inclus d'office.</p></div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="ns-ambassador-section">
+    <section class="ns-ambassador-section" style="background:var(--ns-purple); color:white;">
         <div class="container fp-content">
             <div class="fp-text">
-                <h2>1 pass, 14 stations,<br>l'expertise N'PY.</h2>
-                <p>En devenant partenaire No Souci, vous adossez votre association au premier réseau de stations des Pyrénées. Un gage de qualité et de sécurité pour votre administration.</p>
+                <h2>1 pass, 14 stations.</h2>
+                <p>Le plus grand réseau des Pyrénées accessible avec une seule carte.</p>
                 <ul class="fp-list">
-                    <li><strong>8 stations historiques :</strong> Peyragudes, Piau, Grand Tourmalet, Pic du Midi, Luz-Ardiden, Cauterets, Gourette, La Pierre St-Martin.</li>
-                    <li><strong>6 stations partenaires :</strong> Ax 3 Domaines, Guzet, Les Monts d'Olmes, Formiguères, Porté-Puymorens, Cambre d'Aze.</li>
+                    <li><strong>Hautes-Pyrénées :</strong> Peyragudes, Piau, Tourmalet, Cauterets...</li>
+                    <li><strong>Ariège & Pyrénées-Or :</strong> Ax 3 Domaines, Formiguères...</li>
                 </ul>
             </div>
-            <div class="fp-image">
-                <img src="tony-assis.jpg" alt="Ambassadeur No'Souci - Réseau N'PY">
-            </div>
+            <div class="fp-image"><img src="tony-assis.jpg" alt="Ski"></div>
         </div>
     </section>
 
-    <section class="fast-pass-section">
+    <section class="fast-pass-section" style="background:var(--ns-light-bg);">
         <div class="container fp-content" style="flex-direction: row-reverse;">
             <div class="fp-text">
-                <h2>Le Fast Pass :<br>l'atout numéro 1 ! 🚀</h2>
-                <p>C'est l'avantage ultime inclus dans l'abonnement de vos étudiants. Plus question d'attendre aux principales remontées, avec la carte No Souci, ils peuvent emprunter la file prioritaire pour maximiser leur journée.</p>
-                <p>Cerise on the cake, ils n'ont rien à faire : il suffit de se présenter aux portiques dédiés pour skier encore plus.</p>
+                <h2>Fast Pass inclus 🚀</h2>
+                <p>Vos étudiants doublent tout le monde aux remontées principales. C'est l'atout majeur pour profiter à fond.</p>
             </div>
-            <div class="fp-image">
-                <img src="carte-no-souci-pyrenees.png" alt="Carte de ski No Souci Pyrénées">
-            </div>
+            <div class="fp-image"><img src="carte-no-souci-pyrenees.png" alt="Carte"></div>
         </div>
     </section>
 
     <section class="bde-pitch" id="partenaire">
         <div class="container">
-            <h2>Prêt à équiper vos étudiants ?</h2>
-            <p>Devenir partenaire est <strong>100% gratuit</strong> et se met en place en 48h. Nous créons votre code campus, vous le diffusez sur vos réseaux, et vos étudiants commandent leur pass à tarif réduit livré directement chez eux.</p>
-            <br>
-            <a href="mailto:contact@nosouci.com" class="btn-pink" style="font-size: 1.25rem; padding: 18px 45px;">Demander la création de notre code BDE</a>
+            <h2>Prêt à équiper votre BDE ?</h2>
+            <p>Le partenariat est 100% gratuit. On vous génère un code, vous le partagez, c'est fini.</p>
+            <a href="mailto:contact@nosouci.com" class="btn-hero" style="font-size:1rem; padding:12px 30px;">Demander notre code</a>
         </div>
     </section>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#" class="footer-logo">No'Souci</a>
-                </div>
-                <div class="footer-col">
-                    <h4>A propos de No'Souci</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Assurances</a></li>
-                        <li><a href="#">No'Souci c'est quoi ?</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>J'en veux !</h4>
-                    <ul>
-                        <li><a href="#">Mon compte</a></li>
-                        <li><a href="#">Tarifs</a></li>
-                        <li><a href="#">Achat Express</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>RGPD</h4>
-                    <ul>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><a href="#" class="logo-text">No'Souci</a></div>
+                <div class="footer-col"><h4>A propos</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Accès</h4><ul><li><a href="#">Mon compte</a></li><li><a href="#">Tarifs</a></li></ul></div>
+                <div class="footer-col"><h4>Légal</h4><ul><li><a href="#">CGV</a></li><li><a href="#">Confidentialité</a></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <span>© N'PY 2026</span>
-                <span>Réalisé par N-PY</span>
-            </div>
+            <div class="footer-bottom"><span>© N'PY 2026</span><span>Pure Pyrénées</span></div>
         </div>
     </footer>
 
