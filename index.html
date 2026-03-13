@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carte ski étudiant Pyrénées : fini le passage en caisse, ski paiement à l’usage et réductions jusqu'à -30% dans 14 stations pour les étudiants.">
     <title>Partenariat BDE : Carte ski étudiant | N'PY</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
@@ -11,8 +12,9 @@
             --primary: #0f1c2e;
             --secondary: #ffffff;
             --accent: #ff6b35;
-            --light-bg: #f4f7f9;
-            --text-gray: #4a5568;
+            --accent-light: rgba(255, 107, 53, 0.1);
+            --light-bg: #f8fafc;
+            --text-gray: #475569;
         }
 
         * {
@@ -30,46 +32,40 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         /* --- NAVIGATION --- */
         .top-nav {
             background-color: var(--secondary);
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        /* Faux logo en texte au cas où l'image ne charge pas, très stylisé */
-        .logo-text {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -1.5px;
+        .top-nav img {
+            height: 50px;
+            width: auto;
         }
-        .logo-text span { color: var(--accent); }
 
         /* --- HERO SECTION IMMERSIVE --- */
         header {
-            /* Image de fond de montagne sécurisée qui marchera à 100% */
-            background: linear-gradient(rgba(15, 28, 46, 0.75), rgba(15, 28, 46, 0.9)), 
+            background: linear-gradient(rgba(15, 28, 46, 0.6), rgba(15, 28, 46, 0.9)), 
                         url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: var(--secondary);
-            padding: 8rem 0 6rem 0;
+            padding: 10rem 0 8rem 0; /* Plus de padding pour allonger le haut */
             text-align: center;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
         }
@@ -80,8 +76,8 @@
 
         .hero-subtitle {
             font-size: 1.25rem;
-            color: #cbd5e1;
-            max-width: 700px;
+            color: #e2e8f0;
+            max-width: 750px;
             margin: 0 auto 3rem;
             line-height: 1.8;
         }
@@ -90,7 +86,7 @@
             display: inline-block;
             background-color: var(--accent);
             color: white;
-            padding: 1.2rem 2.5rem;
+            padding: 1.2rem 2.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -105,71 +101,157 @@
             background-color: #ff5416;
         }
 
-        /* --- AVANTAGES --- */
+        /* --- AVANTAGES PREMIUM --- */
         .benefits {
-            padding: 6rem 0;
+            padding: 8rem 0; /* Très grand padding pour aérer la page */
             background-color: var(--light-bg);
         }
 
         .benefits h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 4rem;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 5rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2.5rem;
         }
 
         .benefit-card {
             background: var(--secondary);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease;
-            border: 1px solid #eaeaea;
+            border-radius: 20px; /* Coins plus arrondis */
+            padding: 3rem 2rem; /* Plus haut et plus large */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .benefit-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--accent-light);
         }
 
-        .icon-wrapper {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        /* Style des icônes vectorielles */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+
+        .icon-container svg {
+            width: 40px;
+            height: 40px;
+            stroke-width: 1.5;
         }
 
         .benefit-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
             color: var(--primary);
         }
 
         .benefit-card p {
             color: var(--text-gray);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* --- SECTION LA CARTE --- */
+        .credibility {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 7rem 0;
+        }
+
+        .credibility-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .credibility-text {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .credibility-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .credibility-text p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-image-container {
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            justify-content: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .card-image {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
 
         /* --- FOOTER CTA --- */
         .bottom-cta {
-            background-color: var(--primary);
-            padding: 5rem 0;
+            background-color: var(--secondary);
+            padding: 6rem 0;
             text-align: center;
-            color: white;
         }
 
         .bottom-cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        footer {
+            background-color: #08101a;
+            color: #64748b;
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 0.95rem;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; }
             .hero-subtitle { font-size: 1.1rem; }
-            header { padding: 5rem 20px; }
+            header { padding: 6rem 20px 5rem; }
+            .credibility-content { flex-direction: column-reverse; gap: 3rem; text-align: center;}
         }
     </style>
 </head>
@@ -177,45 +259,81 @@
 
     <nav class="top-nav">
         <div class="container">
-            <a href="#" class="logo-text">n'py<span>.</span></a>
+            <img src="logo-npy.jpg" alt="Logo N'PY">
         </div>
     </nav>
 
     <header>
         <div class="container">
-            <h1>Le ski facile et <span>à prix réduit</span> pour votre campus</h1>
-            <p class="hero-subtitle">Proposez à vos étudiants le sésame ultime pour skier dans 14 stations des Pyrénées. Fini les attentes aux caisses, place au paiement à l'usage et aux réductions massives.</p>
+            <h1>Le ski sans contrainte <span>pour vos étudiants</span></h1>
+            <p class="hero-subtitle">Le programme partenaire exclusif pour les BDE et Universités. Offrez un accès privilégié à 14 stations des Pyrénées avec des réductions massives et une gestion 100% digitalisée.</p>
             <a href="#contact" class="cta-button">Devenir Partenaire BDE</a>
         </div>
     </header>
 
     <section class="benefits">
         <div class="container">
-            <h2>4 raisons de l'adopter pour votre BDE</h2>
+            <h2>4 raisons incontournables de l'adopter</h2>
 
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="icon-wrapper">🎯</div>
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
                     <h3>Zéro charge mentale</h3>
-                    <p>Un service "clé en main". Aucune commande de forfaits cartonnés, aucune récolte de fonds. Tout est 100% digitalisé via un code promo exclusif à votre école.</p>
+                    <p>Un service "clé en main". Oubliez la logistique complexe, les commandes papier et la récolte de fonds. Tout est 100% digitalisé via un code exclusif à votre école.</p>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="icon-wrapper">💸</div>
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="2" y1="10" x2="22" y2="10"></line>
+                        </svg>
+                    </div>
                     <h3>Budget préservé</h3>
-                    <p>Des réductions automatiques : jusqu'à -30% en semaine, -15% le week-end. Et la cerise sur le gâteau : la 7ème journée de la saison est à moitié prix.</p>
+                    <p>Des réductions massives et automatiques : jusqu'à -30% en semaine, -15% le week-end. Et pour récompenser la fidélité, la 7ème journée de la saison est à moitié prix.</p>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="icon-wrapper">⛷️</div>
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
                     <h3>Fini les caisses</h3>
-                    <p>On skie d'abord, on est prélevé ensuite. Vos étudiants accèdent directement aux remontées mécaniques. Ils ne paient que ce qu'ils consomment vraiment.</p>
+                    <p>Le télépéage du ski. Vos étudiants accèdent directement aux remontées mécaniques. Ils skient d'abord, et sont prélevés le mois suivant uniquement sur ce qu'ils consomment.</p>
                 </div>
 
                 <div class="benefit-card">
-                    <div class="icon-wrapper">🛡️</div>
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
                     <h3>Sécurité incluse</h3>
-                    <p>L'argument qui rassure votre administration : l'assurance secours sur piste est intégrée par défaut à la carte. En cas de pépin, les frais sont couverts.</p>
+                    <p>L'argument qui rassure votre administration : l'assurance secours sur piste est intégrée par défaut à la carte. En cas de pépin, les frais d'intervention sont couverts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="credibility">
+        <div class="container">
+            <div class="credibility-content">
+                <div class="credibility-text">
+                    <h2>Un seul sésame pour 14 stations</h2>
+                    <p>La <strong>Carte No Souci Pyrénées</strong> s'appuie sur le savoir-faire pionnier de N'PY. Elle ouvre les portes du plus grand domaine skiable du massif.</p>
+                    <ul style="list-style-type: none; margin-top: 1.5rem; line-height: 2;">
+                        <li>⛷️ <strong>Réseau historique :</strong> Peyragudes, Piau, Grand Tourmalet, Pic du Midi, Luz-Ardiden, Cauterets, Gourette, La Pierre St-Martin.</li>
+                        <li>🤝 <strong>Partenaires :</strong> Ax 3 Domaines, Guzet, Les Monts d'Olmes, Formiguères, Porté-Puymorens, Cambre d'Aze.</li>
+                    </ul>
+                </div>
+                <div class="card-image-container">
+                    <img src="carte-no-souci-pyrenees.png" alt="Carte No Souci Pyrénées" class="card-image">
                 </div>
             </div>
         </div>
@@ -224,10 +342,16 @@
     <section class="bottom-cta" id="contact">
         <div class="container">
             <h2>Prêt à dynamiser votre asso étudiante ?</h2>
-            <p style="margin-bottom: 2rem; color: #cbd5e1;">Mettez en place votre partenariat gratuitement en moins de 48 heures.</p>
-            <a href="mailto:contact@n-py.com" class="cta-button">Nous contacter (Gratuit)</a>
+            <p style="margin-bottom: 2rem; color: var(--text-gray); font-size: 1.1rem;">Mettez en place votre partenariat gratuitement en moins de 48 heures.</p>
+            <a href="mailto:contact@n-py.com" class="cta-button">Contacter l'équipe Campus</a>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 N'PY - Carte No Souci Pyrénées | Le réseau n°1 des stations de ski des Pyrénées</p>
+        </div>
+    </footer>
 
 </body>
 </html>
