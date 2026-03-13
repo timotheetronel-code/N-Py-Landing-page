@@ -15,7 +15,7 @@
             --ns-bg: #ffffff;
             --ns-text: #4a4a4a;
             
-            /* Couleurs des cartes */
+            /* Couleurs des cartes (Design No'Souci actuel) */
             --card-pink: #ff477e;
             --card-purple: #8b3dff;
             --card-yellow: #ffe600;
@@ -44,7 +44,7 @@
         /* --- NAVIGATION --- */
         .top-nav {
             background-color: var(--ns-purple);
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             position: relative;
             z-index: 100;
         }
@@ -96,11 +96,13 @@
             opacity: 1 !important;
         }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO SECTION IMMERSIVE (Retrouve sa photo de fond) --- */
         header {
-            background-color: var(--ns-purple);
+            /* Image de fond de montagne sécurisée qui marchera à 100% */
+            background: linear-gradient(rgba(15, 28, 46, 0.7), rgba(15, 28, 46, 0.9)), 
+                        url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
-            padding: 6rem 0 10rem 0;
+            padding: 10rem 0 12rem 0; /* Padding ajusté pour allonger */
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -157,7 +159,7 @@
             text-decoration: underline;
         }
 
-        /* --- OVERLAPPING CARDS SECTION --- */
+        /* --- AVANTAGES (Design Overlapping No'Souci actuel) --- */
         .benefits {
             background-color: var(--ns-bg);
             padding-bottom: 6rem;
@@ -166,7 +168,7 @@
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
             margin-top: -6rem; /* Fait remonter les cartes sur le violet */
             position: relative;
@@ -198,8 +200,16 @@
         .card-yellow { background-color: var(--card-yellow); }
         .card-blue { background-color: var(--card-blue); }
 
+        /* Style des icônes vectorielles pour un rendu propre */
         .card-icon {
-            font-size: 3rem;
+            width: 70px; /* Taille optimale */
+            height: 70px;
+        }
+
+        .card-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: rgba(255, 255, 255, 0.9); /* Icône presque blanche */
         }
 
         .card-body {
@@ -270,7 +280,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        /* --- SECTION ACHAT LIGNE BDE --- */
+        /* --- SECTION CTA FINAL BDE --- */
         .bde-pitch {
             text-align: center;
             padding: 4rem 0 6rem 0;
@@ -331,7 +341,12 @@
                 
                 <div class="benefit-card">
                     <div class="card-header card-pink">
-                        <span class="card-icon">🎯</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,2a10,10,0,1,0,10,10A10.011,10.011,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"/>
+                                <path d="M12,10.5A1.5,1.5,0,1,1,10.5,12,1.5,1.5,0,0,1,12,10.5Z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h3>Zéro gestion</h3>
@@ -341,7 +356,11 @@
 
                 <div class="benefit-card">
                     <div class="card-header card-purple">
-                        <span class="card-icon">🙌</span>
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M22,11H20.206L16.48,5.77A1,1,0,0,0,15.6,5H12V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V5H2.4A1,1,0,0,0,1.6,6.48L5.326,11H2a1,1,0,0,0-1,1v8a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V12A1,1,0,0,0,22,11ZM7.6,11,4.72,6H6V11ZM8,11V4h4V11Zm8.4,0H11V6h4Zm2.4-5h1.28L20.4,11h-1.6Z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h3>Mains libres</h3>
@@ -350,8 +369,12 @@
                 </div>
 
                 <div class="benefit-card">
-                    <div class="card-header card-yellow">
-                        <span class="card-icon">💸</span>
+                    <div class="icon-container-NS card-yellow">
+                         <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M21,11V7a1,1,0,0,0-1-1H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V6H4A1,1,0,0,0,3,7v4a1,1,0,0,0-1,1v8a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V12A1,1,0,0,0,21,11ZM9,4h6V10H9ZM4,7h4v4H4ZM3,20V12H21v8Z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h3>Jusqu'à -50%</h3>
@@ -361,7 +384,11 @@
 
                 <div class="benefit-card">
                     <div class="card-header card-blue">
-                        <span class="card-icon">🛡️</span>
+                         <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10,0,0,0,2,12v7a1,1,0,0,0,1,1H12s0,0,0,0h9s0,0,0,0H12a1,1,0,0,0,1-1V12A10.011,10.011,0,0,0,12,2Zm0,18H4V12a8,8,0,0,1,8-8V20Z"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h3>Sécurisé</h3>
